@@ -22,6 +22,7 @@ public class ex09 {
                 List<E> newPerm = new ArrayList<>();
                 newPerm.add(prefix);
                 newPerm.addAll(perm);
+
                 output.add(newPerm);
             }
 
@@ -30,7 +31,7 @@ public class ex09 {
     }
 
     static void main() {
-        List<Integer> x = new ArrayList<>(Arrays.asList(1,2,3,4));
+        List<Integer> x = new ArrayList<>(Arrays.asList(1,2,3));
         System.out.println(computeAllPermutations(x));
     }
 
