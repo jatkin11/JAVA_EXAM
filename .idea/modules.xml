@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/JAVA_EXAM.iml" filepath="$PROJECT_DIR$/.idea/JAVA_EXAM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SRC/PAST_PAPER_2024/PAST_PAPER_2024.iml" filepath="$PROJECT_DIR$/SRC/PAST_PAPER_2024/PAST_PAPER_2024.iml" />
       <module fileurl="file://$PROJECT_DIR$/SRC/RECURSION/RECURSION.iml" filepath="$PROJECT_DIR$/SRC/RECURSION/RECURSION.iml" />
       <module fileurl="file://$PROJECT_DIR$/SRC/SRC.iml" filepath="$PROJECT_DIR$/SRC/SRC.iml" />
       <module fileurl="file://$PROJECT_DIR$/SRC/TESTQS/TESTQS.iml" filepath="$PROJECT_DIR$/SRC/TESTQS/TESTQS.iml" />

@@ -9,7 +9,7 @@ public class q6 {
         StringBuilder sb = new StringBuilder();
         for(int i = 0; i <= n; i++)
         {
-            sb.append(s.charAt(i%s.length()));
+            sb.append(s.charAt(i% s.length()));
         }
 
         return sb.toString();
