@@ -1,37 +1,44 @@
+import java.util.Comparator;
+
 public class Walker implements Voyager<Person>{
 
-    private final Object[] arrayToWalk;
+    private final Object[] array;
     private final char c;
-    private int visitedCount = 0;
+    private int currentIndex = 0;
+    private final int arraySize;
 
-    public Walker(Object[] array, char c)
-    {
+    public Walker(Object[] array, char c){
         if(array == null){
-            throw new IllegalArgumentException();
-        }
-        this.arrayToWalk = array;
+        throw new IllegalArgumentException();
+    }
+        this.array = array;
         this.c = c;
+        this.arraySize = array.length;
     }
 
     @Override
-    public Person makeAVisit() {
-        for (int i = visitedCount; i < arrayToWalk.length; i++) {
-            if (arrayToWalk[i] instanceof Person p && p.getName().contains(Character.toString(c))) {
-                visitedCount++;
-                return p;
+    public boolean anotherVisitPossible(){
+        return currentIndex < arraySize;
+    }
+
+    @Override
+    public Person makeAVisit(){
+        while(currentIndex < arraySize){
+            if(array[currentIndex] instanceof Person p){
+                if(p.getName().contains(Character.toString(c))){
+                    currentIndex++;
+                    return p;
+                }
+                currentIndex++;
             }
-            if (arrayToWalk[i] == null) {
-                visitedCount++;
-                return null;
-            } else {
-                visitedCount++;
+            else{
+                if(array[currentIndex] == null){
+                    currentIndex++;
+                    return null;
+                }
+                currentIndex++;
             }
         }
         return null;
-    }
-
-    @Override
-    public boolean anotherVisitPossible() {
-        return this.visitedCount < arrayToWalk.length;
     }
 }
